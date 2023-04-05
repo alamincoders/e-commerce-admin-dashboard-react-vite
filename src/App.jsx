@@ -1,8 +1,13 @@
+import { Routes, Route, Navigate } from "react-router-dom";
+import { Dashboard, Auth } from "@/layouts";
+
 function App() {
   return (
-    <div>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-    </div>
+    <Routes>
+      <Route path="/dashboard/*" element={<Dashboard />} />
+      <Route path="/auth/*" element={<Auth />} />
+      <Route path="*" element={<Navigate to="/dashboard/home" replace />} />
+    </Routes>
   );
 }
 
