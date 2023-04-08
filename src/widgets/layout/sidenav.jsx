@@ -61,10 +61,10 @@ export function Sidenav({ routes }) {
                   {({ isActive }) => (
                     <Button
                       variant={isActive ? "text" : "text"}
-                      className={`flex items-center gap-4 px-4 capitalize text-primary-600 ${
+                      className={`flex items-center gap-4 px-4 capitalize ${
                         isActive
-                          ? "rounded-none border-l-4 border-primary-600 transition duration-150 ease-in"
-                          : ""
+                          ? "rounded-none border-l-4 border-primary-600 text-primary-600 transition duration-150 ease-in"
+                          : "text-black"
                       } `}
                       fullWidth
                     >
