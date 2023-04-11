@@ -1,7 +1,10 @@
 import React from "react";
-
+import { RouterProvider } from "react-router-dom";
+import router from "./routes";
 const App = () => {
-  return <div className="h-screen bg-green-200 flex justify-center items-center">Admin Dashboard </div>;
+    return <>
+        <RouterProvider router={router} />
+    </>;
 };
 
 export default App;
