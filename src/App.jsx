@@ -1,14 +1,7 @@
-import { Routes, Route, Navigate } from "react-router-dom";
-import { Dashboard, Auth } from "@/layouts";
+import React from "react";
 
-function App() {
-  return (
-    <Routes>
-      <Route path="/dashboard/*" element={<Dashboard />} />
-      <Route path="/auth/*" element={<Auth />} />
-      <Route path="*" element={<Navigate to="/dashboard/home" replace />} />
-    </Routes>
-  );
-}
+const App = () => {
+  return <div className="h-screen bg-green-200 flex justify-center items-center">Admin Dashboard </div>;
+};
 
 export default App;
