@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import {
   Bars3CenterLeftIcon,
   PencilIcon,
@@ -9,22 +9,26 @@ import {
 import { BellIcon, CheckIcon } from "@heroicons/react/24/outline";
 import { Menu, Transition, Popover } from "@headlessui/react";
 import { Link } from "react-router-dom";
-
+import { RxTextAlignLeft, RxChevronLeft } from 'react-icons/rx';
+import MobileSideBar from "./MobileSideBar";
 
 export default function Navbar({ showNav, setShowNav }) {
+
+  const [showSidebar,
+    setShowSidebar] = useState(false);
+    const handleCloseSidebar = () => {
+      setShowSidebar(false);
+  };
   return (
-    <div
-      className={`fixed w-full bg-white h-16 flex justify-between items-center transition-all duration-[400ms] ${
-        showNav ? "pl-56" : ""
-      }`}
-    >
-      <div className="pl-4 md:pl-16">
-        <Bars3CenterLeftIcon
-          className="h-8 w-8 text-gray-700 cursor-pointer"
-          onClick={() => setShowNav(!showNav)}
-        />
+    <div className='fixed w-full bg-white h-16 flex justify-between md:justify-end items-center transition-all duration-[400ms] lg:pl-56'>
+      <div className="pl-4 lg:hidden">
+      <RxTextAlignLeft
+        className="h-8 w-8 text-gray-700 cursor-pointer"
+        onClick={() => setShowSidebar(true)}
+      />
       </div>
-      <div className="flex items-center pr-4 md:pr-16">
+
+      <div className="flex items-center pr-4">
         <Popover className="relative">
           <Popover.Button className="outline-none mr-5 md:mr-8 cursor-pointer text-gray-700">
             <BellIcon className="h-6 w-6" />
@@ -32,6 +36,7 @@ export default function Navbar({ showNav, setShowNav }) {
           <Transition
             as={Fragment}
             enter="transition ease-out duration-100"
+
             enterFrom="transform scale-95"
             enterTo="transform scale-100"
             leave="transition ease-in duration=75"
@@ -133,8 +138,8 @@ export default function Navbar({ showNav, setShowNav }) {
               <div className="p-1">
                 <Menu.Item>
                   <Link
-                    to=' /' 
-                    className="flex hover:bg-orange-500 hover:text-white text-gray-700 rounded p-2 text-sm group transition-colors items-center"
+                    to='/' 
+                    className="flex hover:bg-secondary-400 hover:text-white text-gray-700 rounded p-2 text-sm group transition-colors items-center"
                   >
                     <PencilIcon className="h-4 w-4 mr-2" />
                     Edit
@@ -142,8 +147,8 @@ export default function Navbar({ showNav, setShowNav }) {
                 </Menu.Item>
                 <Menu.Item>
                   <Link
-                    to=' /' 
-                    className="flex hover:bg-orange-500 hover:text-white text-gray-700 rounded p-2 text-sm group transition-colors items-center"
+                    to='/' 
+                    className="flex hover:bg-secondary-400 hover:text-white text-gray-700 rounded p-2 text-sm group transition-colors items-center"
                   >
                     <CreditCardIcon className="h-4 w-4 mr-2" />
                     Billing
@@ -151,8 +156,8 @@ export default function Navbar({ showNav, setShowNav }) {
                 </Menu.Item>
                 <Menu.Item>
                   <Link
-                    to=' /' 
-                    className="flex hover:bg-orange-500 hover:text-white text-gray-700 rounded p-2 text-sm group transition-colors items-center"
+                    to='/' 
+                    className="flex hover:bg-secondary-400 hover:text-white text-gray-700 rounded p-2 text-sm group transition-colors items-center"
                   >
                     <Cog8ToothIcon className="h-4 w-4 mr-2" />
                     Settings
@@ -163,6 +168,7 @@ export default function Navbar({ showNav, setShowNav }) {
           </Transition>
         </Menu>
       </div>
+      <MobileSideBar handleCloseSidebar={handleCloseSidebar} visible={showSidebar}/>
     </div>
   );
 }

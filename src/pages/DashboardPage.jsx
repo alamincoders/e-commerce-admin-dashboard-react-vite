@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Home = () => {
+const DashboardPage = () => {
     return (
         <div>
             <p className="text-gray-700 text-3xl mb-16 font-bold">Dashboard</p>
@@ -15,4 +15,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default DashboardPage;
