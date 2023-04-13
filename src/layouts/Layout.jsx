@@ -1,7 +1,6 @@
 import React, {Fragment, useEffect, useState} from "react";
 import {Outlet} from "react-router-dom";
 import Navbar from "../components/shared/Navbar";
-import {Transition} from "@headlessui/react";
 import SideBar from "../components/shared/SideBar";
 
 const Layout = () => {
@@ -14,8 +13,8 @@ const Layout = () => {
             </div>
 
             <main
-                className='pt-16 transition-all duration-[400ms] bg-gray-50 lg:pl-56'>
-                <div className="p-4 "><Outlet/></div>
+                className='pt-16 transition-all duration-[400ms] bg-gray-50 lg:pl-64'>
+                <div className="p-6 "><Outlet/></div>
             </main>
         </div>
     );

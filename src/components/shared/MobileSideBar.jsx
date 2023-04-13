@@ -16,7 +16,7 @@ const MobileSideBar = ({ visible, handleCloseSidebar }) => {
         onClick={handleCloseModal}
         className="lg:hidden z-30 md:mt-10 lg:mt-0 fixed inset-0 bg-black bg-opacity-30 flex items-center justify-start"
       >
-        <div className="relative w-56">
+        <div className="relative w-64">
           <div className="bg-white  w-full h-screen ">
             <SideBar handleCloseSidebar={handleCloseSidebar}/>
           </div>
