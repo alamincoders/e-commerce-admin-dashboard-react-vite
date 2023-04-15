@@ -20,7 +20,7 @@ export default function Navbar({ showNav, setShowNav }) {
       setShowSidebar(false);
   };
   return (
-    <div className='fixed w-full bg-white h-16 flex justify-between md:justify-end items-center transition-all duration-[400ms] lg:pl-56'>
+    <div className='fixed w-full bg-white h-16 flex justify-between lg:justify-end items-center transition-all duration-[400ms] lg:pl-56'>
       <div className="pl-4 lg:hidden">
       <RxTextAlignLeft
         className="h-8 w-8 text-gray-700 cursor-pointer"
