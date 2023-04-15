@@ -1,6 +1,5 @@
 import { Fragment, useState } from "react";
 import {
-  Bars3CenterLeftIcon,
   PencilIcon,
   ChevronDownIcon,
   CreditCardIcon,
@@ -12,7 +11,7 @@ import { Link } from "react-router-dom";
 import { RxTextAlignLeft, RxChevronLeft } from 'react-icons/rx';
 import MobileSideBar from "./MobileSideBar";
 
-export default function Navbar({ showNav, setShowNav }) {
+export default function Navbar() {
 
   const [showSidebar,
     setShowSidebar] = useState(false);
