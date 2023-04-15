@@ -5,7 +5,7 @@ import CustomLink from "../../hooks/CustomLink";
 const SideBar =({handleCloseSidebar}) => {
 
     return (
-        <div className="fixed w-56 h-full bg-white">
+        <div className="fixed w-64 h-full bg-white">
             <div className="flex justify-center mt-6 mb-14">
                 <picture>
                     <img
