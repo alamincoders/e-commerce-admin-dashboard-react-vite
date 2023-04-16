@@ -3,36 +3,36 @@
       "_id": "643a210eb80b33a223538073",
       "order_time": "Apr 14, 2023",
       "delivery_address": "dhaka, bangladesh",
-      "phone": 15777777,
+      "phone": 1511111,
       "payment_method": "card",
-      "order_amount": 50,
+      "order_amount": 50.00,
       "status": "pending"
     },
     {
       "_id": "643a210ec1e844c4cdb3001a",
       "order_time": "Apr 14, 2023",
-      "delivery_address": "dhaka, bangladesh",
+      "delivery_address": "comilla, bangladesh",
       "phone": 15777777,
       "payment_method": "card",
-      "order_amount": 50,
+      "order_amount": 50.00,
       "status": "pending"
     },
     {
       "_id": "643a210e55725d17f2f1ea7a",
       "order_time": "Apr 14, 2023",
-      "delivery_address": "dhaka, bangladesh",
+      "delivery_address": "chandpur, bangladesh",
       "phone": 15777777,
       "payment_method": "card",
-      "order_amount": 50,
+      "order_amount": 50.00,
       "status": "pending"
     },
     {
       "_id": "643a210ef8d1c8a28ced1d8e",
       "order_time": "Apr 14, 2023",
-      "delivery_address": "dhaka, bangladesh",
-      "phone": 15777777,
+      "delivery_address": "cox's bazar, bangladesh",
+      "phone": 1533333,
       "payment_method": "card",
-      "order_amount": 50,
+      "order_amount": 50.00,
       "status": "pending"
     },
     {
@@ -41,16 +41,16 @@
       "delivery_address": "dhaka, bangladesh",
       "phone": 15777777,
       "payment_method": "card",
-      "order_amount": 50,
+      "order_amount": 50.00,
       "status": "pending"
     },
     {
       "_id": "643a210ea813e38edfdf7845",
       "order_time": "Apr 14, 2023",
-      "delivery_address": "dhaka, bangladesh",
-      "phone": 15777777,
+      "delivery_address": "comilla, bangladesh",
+      "phone": 15666,
       "payment_method": "card",
-      "order_amount": 50,
+      "order_amount": 50.00,
       "status": "pending"
     },
     {
@@ -59,7 +59,7 @@
       "delivery_address": "dhaka, bangladesh",
       "phone": 15777777,
       "payment_method": "card",
-      "order_amount": 50,
+      "order_amount": 50.00,
       "status": "pending"
     },
     {
@@ -68,7 +68,7 @@
       "delivery_address": "dhaka, bangladesh",
       "phone": 15777777,
       "payment_method": "card",
-      "order_amount": 50,
+      "order_amount": 50.00,
       "status": "pending"
     },
     {
@@ -77,7 +77,7 @@
       "delivery_address": "dhaka, bangladesh",
       "phone": 15777777,
       "payment_method": "card",
-      "order_amount": 50,
+      "order_amount": 50.00,
       "status": "pending"
     },
     {
@@ -86,7 +86,7 @@
       "delivery_address": "dhaka, bangladesh",
       "phone": 15777777,
       "payment_method": "card",
-      "order_amount": 50,
+      "order_amount": 50.00,
       "status": "pending"
     },
     {
@@ -95,7 +95,7 @@
       "delivery_address": "dhaka, bangladesh",
       "phone": 15777777,
       "payment_method": "card",
-      "order_amount": 50,
+      "order_amount": 50.00,
       "status": "pending"
     },
     {
@@ -104,7 +104,7 @@
       "delivery_address": "dhaka, bangladesh",
       "phone": 15777777,
       "payment_method": "card",
-      "order_amount": 50,
+      "order_amount": 50.00,
       "status": "pending"
     },
     {
@@ -113,7 +113,97 @@
       "delivery_address": "dhaka, bangladesh",
       "phone": 15777777,
       "payment_method": "card",
-      "order_amount": 50,
+      "order_amount": 50.00,
+      "status": "pending"
+    },
+    {
+      "_id": "643a210ef12ce23fd2f6d4d8",
+      "order_time": "Apr 14, 2023",
+      "delivery_address": "dhaka, bangladesh",
+      "phone": 15777777,
+      "payment_method": "card",
+      "order_amount": 50.00,
+      "status": "pending"
+    },
+    {
+      "_id": "643a210e0020a06865126a91",
+      "order_time": "Apr 14, 2023",
+      "delivery_address": "dhaka, bangladesh",
+      "phone": 15777777,
+      "payment_method": "card",
+      "order_amount": 50.00,
+      "status": "pending"
+    },
+    {
+      "_id": "643a210ef12ce23fd2f6d4d8",
+      "order_time": "Apr 14, 2023",
+      "delivery_address": "dhaka, bangladesh",
+      "phone": 15777777,
+      "payment_method": "card",
+      "order_amount": 50.00,
+      "status": "pending"
+    },
+    {
+      "_id": "643a210e0020a06865126a91",
+      "order_time": "Apr 14, 2023",
+      "delivery_address": "dhaka, bangladesh",
+      "phone": 15777777,
+      "payment_method": "card",
+      "order_amount": 50.00,
+      "status": "pending"
+    },
+    {
+      "_id": "643a210ef12ce23fd2f6d4d8",
+      "order_time": "Apr 14, 2023",
+      "delivery_address": "dhaka, bangladesh",
+      "phone": 15777777,
+      "payment_method": "card",
+      "order_amount": 50.00,
+      "status": "pending"
+    },
+    {
+      "_id": "643a210e0020a06865126a91",
+      "order_time": "Apr 14, 2023",
+      "delivery_address": "dhaka, bangladesh",
+      "phone": 15777777,
+      "payment_method": "card",
+      "order_amount": 50.00,
+      "status": "pending"
+    },
+    {
+      "_id": "643a210ef12ce23fd2f6d4d8",
+      "order_time": "Apr 14, 2023",
+      "delivery_address": "dhaka, bangladesh",
+      "phone": 15777777,
+      "payment_method": "card",
+      "order_amount": 50.00,
+      "status": "pending"
+    },
+    {
+      "_id": "643a210e0020a06865126a91",
+      "order_time": "Apr 14, 2023",
+      "delivery_address": "dhaka, bangladesh",
+      "phone": 15777777,
+      "payment_method": "card",
+      "order_amount": 50.00,
+      "status": "pending"
+    },
+    {
+      "_id": "643a210ef12ce23fd2f6d4d8",
+      "order_time": "Apr 14, 2023",
+      "delivery_address": "dhaka, bangladesh",
+      "phone": 15777777,
+      "payment_method": "card",
+      "order_amount": 50.00,
+      "status": "pending"
+    },
+    {
+      "_id": "643a210e0020a06865126a91",
+      "order_time": "Apr 14, 2023",
+      "delivery_address": "dhaka, bangladesh",
+      "phone": 15777777,
+      "payment_method": "card",
+      "order_amount": 50.00,
       "status": "pending"
     }
   ]
