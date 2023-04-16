@@ -13,7 +13,7 @@
       "order_time": "Apr 2, 2023",
       "delivery_address": "comilla, bangladesh",
       "phone": 15777777,
-      "payment_method": "card",
+      "payment_method": "Cash",
       "order_amount": 50.00,
       "status": "pending"
     },
@@ -31,7 +31,7 @@
       "order_time": "Apr 4, 2023",
       "delivery_address": "cox's bazar, bangladesh",
       "phone": 1533333,
-      "payment_method": "card",
+      "payment_method": "Cash",
       "order_amount": 50.00,
       "status": "pending"
     },
@@ -139,7 +139,7 @@
       "order_time": "Apr 16, 2023",
       "delivery_address": "dhaka, bangladesh",
       "phone": 15777777,
-      "payment_method": "card",
+      "payment_method": "Cash",
       "order_amount": 50.00,
       "status": "pending"
     },
@@ -157,7 +157,7 @@
       "order_time": "Apr 18, 2023",
       "delivery_address": "dhaka, bangladesh",
       "phone": 15777777,
-      "payment_method": "card",
+      "payment_method": "Cash",
       "order_amount": 50.00,
       "status": "pending"
     },
