@@ -1,5 +1,6 @@
 import React from "react";
 import { Transition } from "@headlessui/react";
+import AddProductForm from "./AddProductForm";
 
 const Modal = ({ isOpen, onClose }) => {
   return (
@@ -22,48 +23,7 @@ const Modal = ({ isOpen, onClose }) => {
             <p>Add your product and necessary information from here</p>
           </div>
           <div className="mt-8 h-[75%] overflow-y-scroll bg-white p-5">
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor eaque obcaecati odit laudantium quas nobis adipisci expedita ducimus nam
-              modi quod deserunt dolorem tenetur unde, facilis commodi necessitatibus et quasi vitae assumenda fugiat. Repellat ratione earum porro
-              dolorum consequatur molestiae, eligendi aliquid possimus dolores nisi tempore dolore pariatur saepe consectetur reprehenderit, vel dicta
-              perferendis! At, necessitatibus praesentium reiciendis voluptatibus sunt, dolorum corrupti accusamus numquam provident labore fugit quod
-              ab nisi quibusdam, placeat ea quisquam animi tempore doloribus? Itaque perspiciatis aperiam placeat at recusandae sunt exercitationem
-              ipsum sequi illum, ullam iusto quibusdam vitae nemo voluptates ducimus molestias unde doloribus officiis aliquam repellat incidunt ipsam
-              possimus dolorum. Molestias quis aspernatur labore ipsum? Nobis ab optio aperiam mollitia, cupiditate repellat repudiandae cumque
-              assumenda quasi illo ea temporibus itaque iure nisi dolorem praesentium sed eum consequuntur provident id eos porro quisquam
-              voluptatibus? Voluptas ducimus facilis laudantium modi recusandae labore nam praesentium, consequuntur laborum illo necessitatibus
-              quaerat eligendi. Eveniet accusantium suscipit qui rerum! Quasi distinctio hic saepe! Dolorum voluptatem cumque at, tempora excepturi
-              adipisci, veniam repudiandae nihil dolore itaque nemo commodi accusamus. Perspiciatis, illo facere blanditiis natus laudantium obcaecati
-              eum id commodi accusantium quam unde harum quos animi, dolorum quas libero voluptatem itaque quaerat ipsa.
-            </p>{" "}
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor eaque obcaecati odit laudantium quas nobis adipisci expedita ducimus nam
-              modi quod deserunt dolorem tenetur unde, facilis commodi necessitatibus et quasi vitae assumenda fugiat. Repellat ratione earum porro
-              dolorum consequatur molestiae, eligendi aliquid possimus dolores nisi tempore dolore pariatur saepe consectetur reprehenderit, vel dicta
-              perferendis! At, necessitatibus praesentium reiciendis voluptatibus sunt, dolorum corrupti accusamus numquam provident labore fugit quod
-              ab nisi quibusdam, placeat ea quisquam animi tempore doloribus? Itaque perspiciatis aperiam placeat at recusandae sunt exercitationem
-              ipsum sequi illum, ullam iusto quibusdam vitae nemo voluptates ducimus molestias unde doloribus officiis aliquam repellat incidunt ipsam
-              possimus dolorum. Molestias quis aspernatur labore ipsum? Nobis ab optio aperiam mollitia, cupiditate repellat repudiandae cumque
-              assumenda quasi illo ea temporibus itaque iure nisi dolorem praesentium sed eum consequuntur provident id eos porro quisquam
-              voluptatibus? Voluptas ducimus facilis laudantium modi recusandae labore nam praesentium, consequuntur laborum illo necessitatibus
-              quaerat eligendi. Eveniet accusantium suscipit qui rerum! Quasi distinctio hic saepe! Dolorum voluptatem cumque at, tempora excepturi
-              adipisci, veniam repudiandae nihil dolore itaque nemo commodi accusamus. Perspiciatis, illo facere blanditiis natus laudantium obcaecati
-              eum id commodi accusantium quam unde harum quos animi, dolorum quas libero voluptatem itaque quaerat ipsa.
-            </p>{" "}
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor eaque obcaecati odit laudantium quas nobis adipisci expedita ducimus nam
-              modi quod deserunt dolorem tenetur unde, facilis commodi necessitatibus et quasi vitae assumenda fugiat. Repellat ratione earum porro
-              dolorum consequatur molestiae, eligendi aliquid possimus dolores nisi tempore dolore pariatur saepe consectetur reprehenderit, vel dicta
-              perferendis! At, necessitatibus praesentium reiciendis voluptatibus sunt, dolorum corrupti accusamus numquam provident labore fugit quod
-              ab nisi quibusdam, placeat ea quisquam animi tempore doloribus? Itaque perspiciatis aperiam placeat at recusandae sunt exercitationem
-              ipsum sequi illum, ullam iusto quibusdam vitae nemo voluptates ducimus molestias unde doloribus officiis aliquam repellat incidunt ipsam
-              possimus dolorum. Molestias quis aspernatur labore ipsum? Nobis ab optio aperiam mollitia, cupiditate repellat repudiandae cumque
-              assumenda quasi illo ea temporibus itaque iure nisi dolorem praesentium sed eum consequuntur provident id eos porro quisquam
-              voluptatibus? Voluptas ducimus facilis laudantium modi recusandae labore nam praesentium, consequuntur laborum illo necessitatibus
-              quaerat eligendi. Eveniet accusantium suscipit qui rerum! Quasi distinctio hic saepe! Dolorum voluptatem cumque at, tempora excepturi
-              adipisci, veniam repudiandae nihil dolore itaque nemo commodi accusamus. Perspiciatis, illo facere blanditiis natus laudantium obcaecati
-              eum id commodi accusantium quam unde harum quos animi, dolorum quas libero voluptatem itaque quaerat ipsa.
-            </p>
+            <AddProductForm />
           </div>
           <div className="grid grid-cols-2 gap-5 mt-10 mx-2 lg:w-5/6 lg:mx-auto">
             <button onClick={onClose} className="bg-gray-200/80 text-error-400 w-full cursor-pointer py-3 border-none rounded-md font-medium">
