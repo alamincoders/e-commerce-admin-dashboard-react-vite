@@ -122,7 +122,7 @@ const CustomerTable = () => {
                     </div>
                 </div>
                 <div
-                    className='text-gray-900 flex justify-between items-center w-full pl-[15px] pr-[30px] py-6 text-sm'>
+                    className='text-gray-900 flex flex-col md:flex-row gap-6 justify-between items-center w-full pl-[15px] pr-[30px] py-6 text-sm'>
                     <p className='uppercase font-semibold'>showing ({itemsOffset + 1}
                         - {itemsOffset + currentItems.length}) of {customer.length}</p>
                     <UsePagination

@@ -14,7 +14,7 @@ const Layout = () => {
 
             <main
                 className='pt-16 transition-all duration-[400ms] bg-gray-50 lg:pl-64'>
-                <div className="p-6 "><Outlet/></div>
+                <div className=" p-2 md:p-6 "><Outlet/></div>
             </main>
         </div>
     );

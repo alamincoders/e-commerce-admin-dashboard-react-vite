@@ -7,6 +7,7 @@ const Table = () => {
         <div>
             <h2 className='text-xl pb-4'>Table For Customer</h2>
             <CustomerTable/>
+            <h2 className='text-xl py-6'>Table For Orders</h2>
             <OrderTable/>
         </div>
     );
