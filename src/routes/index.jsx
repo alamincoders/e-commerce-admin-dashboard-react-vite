@@ -4,6 +4,7 @@ import Error from "../pages/Error";
 import Dashboard from "../pages/Dashboard";
 import Products from "../pages/Products";
 import Customers from "../pages/Customers";
+import Form from "../components/lib/Form";
 
 const router = createBrowserRouter([
   {
@@ -13,7 +14,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Dashboard/>,
+        element: <Dashboard />,
       },
       {
         path: "/dashboard",
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: "/customers",
         element: <Customers />,
+      },
+      {
+        path: "/forms",
+        element: <Form />,
       },
     ],
   },
