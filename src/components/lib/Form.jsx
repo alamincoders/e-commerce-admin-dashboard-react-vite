@@ -28,10 +28,13 @@ const Form = () => {
     setFormData((prevState) => ({ ...prevState, [name]: inputValue }));
   };
 
+  console.log(formData);
+
   return (
     <div className="">
       <div className="w-full bg-white p-8 rounded-lg shadow-md">
-        <h2 className="text-3xl font-semibold mb-6">Contact Us</h2>
+        <h2 className="text-3xl font-semibold mb-6">Forms</h2>
+
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <label htmlFor="name" className="block font-medium mb-2">
@@ -85,17 +88,59 @@ const Form = () => {
             <label htmlFor="gender" className="block font-medium mb-2">
               Gender
             </label>
-            <select
-              id="gender"
-              name="gender"
-              value={formData.gender}
-              onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-secondary-500"
-            >
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-              <option value="other">Other</option>
-            </select>
+            <div className="flex space-x-2">
+              <div className="flex space-x-2">
+                {" "}
+                <Input type="radio" id="male" name="gender" value={formData.gender} onChange={handleChange} />
+                <label htmlFor="male">Male</label>
+              </div>
+              <br />
+              <div className="flex space-x-2">
+                <Input type="radio" id="female" name="gender" value={formData.gender} onChange={handleChange} />
+                <label htmlFor="female">Female</label>
+              </div>
+              <br />
+              <div className="flex space-x-2">
+                <Input name="gender" value={formData.gender} onChange={handleChange} type="radio" id="other" />
+                <label htmlFor="other">Other</label>
+              </div>
+            </div>
+          </div>
+          <div className="mb-4">
+            <label htmlFor="select" className="block font-medium mb-2">
+              Select Options
+            </label>
+            <div className="relative">
+              <select
+                className="input_styles relative appearance-none focus:outline-none focus:border-blue-500"
+                name="Default Category"
+                id="Default Category"
+              >
+                <option value="Default Category" className="text-gray-500">
+                  Default Category
+                </option>
+                <option value="Organic Food">Organic Food</option>
+                <option value="Fish &amp; Meat">Fish &amp; Meat</option>
+                <option value="Fruits &amp; Vegetable">Fruits &amp; Vegetable</option>
+                <option value="Fresh Seafood">Fresh Seafood</option>
+                <option value="Cooking Essentials">Cooking Essentials</option>
+                <option value="Breakfast">Breakfast</option>
+                <option value="Drinks">Drinks</option>
+              </select>
+
+              <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-500">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-6 h-6 inline-block"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9" />
+                </svg>
+              </div>
+            </div>
           </div>
           <div className="mb-4">
             <div className="flex items-center">
@@ -119,6 +164,8 @@ const Form = () => {
             Submit
           </button>
         </form>
+
+        {/* show successful message */}
         <Transition
           show={showSuccessMessage}
           enter="transition-opacity duration-300"
