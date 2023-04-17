@@ -1,6 +1,5 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import ReactPaginate from 'react-paginate';
 import { UsePagination } from '../../hooks/UsePagination';
 
 const RecentOrder = () => {
