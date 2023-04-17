@@ -1,6 +1,8 @@
 import axios from 'axios';
 import React, {useEffect, useState} from 'react';
 import {UsePagination} from '../../hooks/UsePagination';
+import {RiDeleteBinLine} from 'react-icons/ri';
+import {BiShow} from 'react-icons/bi';
 
 const CustomerTable = () => {
     const [customer,
@@ -90,8 +92,27 @@ const CustomerTable = () => {
                                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                                             {customer.phone}
                                         </td>
-                                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                                            <a href="#" className="text-indigo-600 hover:text-indigo-900">Edit</a>
+                                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium flex gap-4">
+                                            <div class="relative flex flex-col items-center group">
+                                                <button className='text-gray-400 text-lg'><BiShow/></button>
+                                                <div
+                                                    class="absolute bottom-0 flex-col items-center hidden mb-6 group-hover:flex">
+                                                    <span
+                                                        class="relative z-10 p-2 text-xs leading-none text-white whitespace-no-wrap bg-success-500 shadow-lg">View Order</span>
+                                                    <div class="w-3 h-3 -mt-2 rotate-45 bg-success-500"></div>
+                                                </div>
+                                            </div>
+                                            <div class="relative flex flex-col items-center group">
+                                            <button className='text-gray-400 text-lg'><RiDeleteBinLine/></button>
+                                                <div
+                                                    class="absolute bottom-0 flex-col items-center hidden mb-6 group-hover:flex">
+                                                    <span
+                                                        class="relative z-10 p-2 text-xs leading-none text-white whitespace-no-wrap bg-error-500 shadow-lg">Delete</span>
+                                                    <div class="w-3 h-3 -mt-2 rotate-45 bg-error-500"></div>
+                                                </div>
+                                            </div>
+
+                                            
                                         </td>
                                     </tr>)
 }
