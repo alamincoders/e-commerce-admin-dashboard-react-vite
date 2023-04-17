@@ -1,9 +1,11 @@
+import { lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
-import Layout from "../layouts/Layout";
-import Error from "../pages/Error";
-import Dashboard from "../pages/Dashboard";
-import Products from "../pages/Products";
-import Customers from "../pages/Customers";
+const Layout = lazy(() => import("../layouts/Layout"));
+const Erro = lazy(() => import("../pages/Error"));
+const Dashboard = lazy(() => import("../pages/Dashboard"));
+const Products = lazy(() => import("../pages/Products"));
+const Customers = lazy(() => import("../pages/Customers"));
+const Form = lazy(() => import("../components/lib/Form"));
 
 const router = createBrowserRouter([
   {
@@ -13,7 +15,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Dashboard/>,
+        element: <Dashboard />,
       },
       {
         path: "/dashboard",
@@ -26,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: "/customers",
         element: <Customers />,
+      },
+      {
+        path: "/forms",
+        element: <Form />,
       },
     ],
   },
