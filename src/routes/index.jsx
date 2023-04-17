@@ -4,6 +4,7 @@ import Error from "../pages/Error";
 import Dashboard from "../pages/Dashboard";
 import Products from "../pages/Products";
 import Customers from "../pages/Customers";
+import Table from "../pages/Table";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: "/customers",
         element: <Customers />,
+      },
+      {
+        path: "/table",
+        element: <Table />,
       },
     ],
   },
