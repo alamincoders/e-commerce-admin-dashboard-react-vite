@@ -1,12 +1,9 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import ReactPaginate from 'react-paginate';
+import { UsePagination } from '../../hooks/UsePagination';
 
 const RecentOrder = () => {
-
-
     const [orders, setOrders] = useState([])
-    
     const fetchData = () => {
     axios
         .get("/order.json")
@@ -25,15 +22,6 @@ const RecentOrder = () => {
     const [pageCount, setPageCount] = useState(0)
     const [itemsOffset, setItemsOffset] = useState(0)
     const itemsPerPage = 5
-    useEffect(()=>{
-        const endOffset =itemsOffset + itemsPerPage
-        setCurrentItems(orders.slice(itemsOffset, endOffset))
-        setPageCount(Math.ceil(orders.length/itemsPerPage))
-    },[itemsOffset, itemsPerPage, orders])
-    const handlePageClick = (event)=>{
-        const newOffset = (event.selected * itemsPerPage) % orders.length
-        setItemsOffset(newOffset)
-    }
 
     return (
         <div>
@@ -63,25 +51,7 @@ const RecentOrder = () => {
                 </table>
                     <div className='text-gray-900 flex justify-between items-center w-full pl-[15px] pr-[30px] py-6 text-sm'>
                         <p className='uppercase font-semibold'>showing ({itemsOffset+1} - {itemsOffset+ currentItems.length}) of {orders.length}</p>
-                        <ReactPaginate
-                                    breakLabel="..."
-                                    nextLabel=">"
-                                    onPageChange={handlePageClick}
-                                    pageRangeDisplayed={1}
-                                    pageCount={pageCount}
-                                    previousLabel="<"
-                                    renderOnZeroPageCount={null}
-                                    marginPagesDisplayed={3}
-                                    containerClassName="flex gap-1"
-                                    pageLinkClassName="px-4 py-2 focus:outline-none"
-                                    activeLinkClassName="px-4 py-2 rounded-lg bg-primary-900 text-primary-50"
-                                    previousLinkClassName="px-4 py-2"
-                                    nextLinkClassName="px-4 py-2"
-                                    breakLinkClassName="px-4 py-2 rounded-lg bg-white text-gray-800 hover:bg-gray-200"
-                                    disabledClassName="opacity-50 cursor-not-allowed"
-                                    disabledLinkClassName="cursor-not-allowed"
-                                    activeClassName=""
-                                />
+                        <UsePagination pageCount={pageCount} setPageCount={setPageCount} itemsOffset={itemsOffset} setItemsOffset={setItemsOffset} setCurrentItems={setCurrentItems} itemsPerPage={itemsPerPage} items={orders}/>
                     </div>
             </div>
         </div>
