@@ -20,7 +20,7 @@ const ProductTable = () => {
     useEffect(() => {
         fetchData();
     }, []);
-
+ 
 
     const [currentItems,
         setCurrentItems] = useState([])
@@ -41,7 +41,7 @@ const ProductTable = () => {
           })
         );
       };
-      
+
     return (
         <div>
             <div
