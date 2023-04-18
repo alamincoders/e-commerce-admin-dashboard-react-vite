@@ -4,14 +4,14 @@ import {UsePagination} from '../../hooks/UsePagination';
 import {RiDeleteBinLine} from 'react-icons/ri';
 import {BiShow} from 'react-icons/bi';
 
-const CustomerTable = () => {
-    const [customer,
-        setCustomer] = useState([])
+const ProductTable = () => {
+    const [products,
+        setProducts] = useState([])
     const fetchData = () => {
         axios
-            .get("customer.json")
+            .get("/product.json")
             .then((response) => {
-                setCustomer(response.data);
+                setProducts(response.data);
             })
             .catch((error) => {
                 console.log(error);
@@ -20,7 +20,8 @@ const CustomerTable = () => {
     useEffect(() => {
         fetchData();
     }, []);
-    console.log(customer);
+
+
     const [currentItems,
         setCurrentItems] = useState([])
     const [pageCount,
@@ -29,6 +30,18 @@ const CustomerTable = () => {
         setItemsOffset] = useState(0)
     const itemsPerPage = 5
 
+    const toggle = (index) => {
+        setProducts((prevState) =>
+          prevState.map((product, i) => {
+            if (i === index) {
+              return { ...product, isOn: !product.isOn };
+            } else {
+              return product;
+            }
+          })
+        );
+      };
+      
     return (
         <div>
             <div
@@ -42,63 +55,88 @@ const CustomerTable = () => {
                                         <th
                                             scope="col"
                                             className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                            Id
+                                            Product
                                         </th>
                                         <th
                                             scope="col"
                                             className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                            Joining Date
+                                            Category
                                         </th>
                                         <th
                                             scope="col"
                                             className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                            Name
+                                            Price
                                         </th>
                                         <th
                                             scope="col"
                                             className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                            Email
+                                            Sale Price
                                         </th>
                                         <th
                                             scope="col"
                                             className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                            Phone
+                                            Stock
                                         </th>
                                         <th
                                             scope="col"
                                             className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                            Actions
+                                            Status
+                                        </th>
+                                        <th
+                                            scope="col"
+                                            className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            Published
+                                        </th>
+                                        <th
+                                            scope="col"
+                                            className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            Action
                                         </th>
                                     </tr>
                                 </thead>
                                 <tbody className="bg-white divide-y divide-gray-200">
-                                    {currentItems.map(customer => <tr className="hover:bg-gray-50">
-                                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                                            {customer
-                                                ._id
-                                                .slice(8, 12)}
+                                    {currentItems.map((product, index) => <tr className="hover:bg-gray-50">
+                                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 flex items-center gap-2">
+                                            <img className='w-8 h-8 rounded-full hidden md:block' src={product.picture} alt="" />
+                                            <span>{product.name}</span>
                                         </td>
-                                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                            {customer
-                                                .registered
-                                                .slice(0, 10)}
+                                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 capitalize">
+                                            {product.category}
                                         </td>
-                                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                            {customer.name}
+                                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 capitalize">
+                                            {product.price}
                                         </td>
-                                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                            {customer.email}
+                                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900 capitalize font-semibold">
+                                            {product.sale_price}
                                         </td>
-                                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                            {customer.phone}
+                                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900 capitalize font-semibold">
+                                            {product.stock}
+                                        </td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 capitalize">
+                                            {product.selling && <span className='bg-success-100 text-success-500 text-[14px] px-[6px] py-[1px] rounded-full'>selling</span>}
+                                            {!product.selling && <span className='bg-accent-100 text-accent-500 text-[14px] px-[6px] py-[1px] rounded-full'>Pending</span>}
+                                        </td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 capitalize">
+                                        <button
+                                        className={`relative inline-flex items-center h-4 rounded-full w-8 focus:outline-none ${
+                                            product.isOn ? "bg-success-500" : "bg-gray-200"
+                                        }`}
+                                        onClick={() => toggle(index)}
+                                        >
+                                        <span
+                                            className={`inline-block w-4 h-4 transform transition ${
+                                            product.isOn ? "translate-x-5" : "translate-x-0"
+                                            } bg-white rounded-full`}
+                                        />
+                                        </button>
                                         </td>
                                         <td className="px-6 py-4 whitespace-nowrap text-sm font-medium flex gap-4">
-                                            <div class="relative flex flex-col items-center group">
+                                        <div class="relative flex flex-col items-center group">
                                                 <button className='text-gray-400 text-lg'><BiShow/></button>
                                                 <div
                                                     class="absolute bottom-0 flex-col items-center hidden mb-6 group-hover:flex">
                                                     <span
-                                                        class="relative z-10 p-2 text-xs leading-none text-white whitespace-no-wrap bg-success-500 shadow-lg">View Order</span>
+                                                        class="relative z-10 p-2 text-xs leading-none text-white whitespace-no-wrap bg-success-500 shadow-lg">View</span>
                                                     <div class="w-3 h-3 -mt-2 rotate-45 bg-success-500"></div>
                                                 </div>
                                             </div>
@@ -111,6 +149,7 @@ const CustomerTable = () => {
                                                     <div class="w-3 h-3 -mt-2 rotate-45 bg-error-500"></div>
                                                 </div>
                                             </div>
+
                                         </td>
                                     </tr>)
 }
@@ -122,7 +161,7 @@ const CustomerTable = () => {
                 <div
                     className='text-gray-900 flex flex-col md:flex-row gap-6 justify-between items-center w-full pl-[15px] pr-[30px] py-6 text-sm'>
                     <p className='uppercase font-semibold'>showing ({itemsOffset + 1}
-                        - {itemsOffset + currentItems.length}) of {customer.length}</p>
+                        - {itemsOffset + currentItems.length}) of {products.length}</p>
                     <UsePagination
                         pageCount={pageCount}
                         setPageCount={setPageCount}
@@ -130,11 +169,11 @@ const CustomerTable = () => {
                         setItemsOffset={setItemsOffset}
                         setCurrentItems={setCurrentItems}
                         itemsPerPage={itemsPerPage}
-                        items={customer}/>
+                        items={products}/>
                 </div>
             </div>
         </div>
     );
 };
 
-export default CustomerTable;
+export default ProductTable;

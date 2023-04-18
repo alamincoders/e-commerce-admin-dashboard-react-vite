@@ -1,6 +1,6 @@
 import {RiLayoutGridFill} from 'react-icons/ri';
-import {HiUsers,HiShoppingBag} from 'react-icons/hi';
-import {BsTable} from 'react-icons/bs';
+import {HiShoppingBag} from 'react-icons/hi';
+import {BsTable,BsCardChecklist} from 'react-icons/bs';
 import CustomLink from "../../hooks/CustomLink";
 
 const SideBar =({handleCloseSidebar}) => {
@@ -19,8 +19,8 @@ const SideBar =({handleCloseSidebar}) => {
             <div className="flex flex-col">
                 <CustomLink onClick={handleCloseSidebar} to='/'> <button className="flex items-center gap-2"><RiLayoutGridFill className="text-xl"/> <span>Dashboard</span></button></CustomLink>
                 <CustomLink onClick={handleCloseSidebar} to='/products'><button className="flex items-center gap-2"><HiShoppingBag className="text-xl"/> <span>Products</span></button></CustomLink>
-                <CustomLink onClick={handleCloseSidebar} to='/customers'><button className="flex items-center gap-2"><HiUsers/> <span>Customers</span></button></CustomLink>
                 <CustomLink onClick={handleCloseSidebar} to='/table'><button className="flex items-center gap-2"><BsTable/> <span>Table</span></button></CustomLink>
+                <CustomLink onClick={handleCloseSidebar} to='/card'><button className="flex items-center gap-2"><BsCardChecklist/> <span>Card</span></button></CustomLink>
             </div>
         </div>
     );

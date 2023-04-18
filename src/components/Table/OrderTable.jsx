@@ -1,8 +1,6 @@
 import axios from 'axios';
 import React, {useEffect, useState} from 'react';
 import {UsePagination} from '../../hooks/UsePagination';
-import {RiDeleteBinLine} from 'react-icons/ri';
-import {BiShow} from 'react-icons/bi';
 
 const OrderTable = () => {
     const [orders,

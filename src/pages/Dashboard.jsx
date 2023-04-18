@@ -1,7 +1,7 @@
 import React from 'react';
 import OrderOverview from '../components/dashboard/OrderOverview';
-import RecentOrder from '../components/dashboard/RecentOrder';
 import Chart from '../components/dashboard/Chart';
+import OrderTable from '../components/Table/OrderTable';
 
 const Dashboard = () => {
     return (
@@ -11,7 +11,7 @@ const Dashboard = () => {
             
             <Chart/>
             <h2 className='text-xl font-medium pb-6'>Recent Order</h2>
-           <RecentOrder/>
+            <OrderTable/>
         </div>
     );
 };

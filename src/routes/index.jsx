@@ -3,8 +3,8 @@ import Layout from "../layouts/Layout";
 import Error from "../pages/Error";
 import Dashboard from "../pages/Dashboard";
 import Products from "../pages/Products";
-import Customers from "../pages/Customers";
 import Table from "../pages/Table";
+import CardCollection from "../pages/CardCollection";
 
 const router = createBrowserRouter([
   {
@@ -25,12 +25,12 @@ const router = createBrowserRouter([
         element: <Products />,
       },
       {
-        path: "/customers",
-        element: <Customers />,
-      },
-      {
         path: "/table",
         element: <Table />,
+      },
+      {
+        path: "/card",
+        element: <CardCollection />,
       },
     ],
   },
