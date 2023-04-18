@@ -2,7 +2,7 @@ import React from "react";
 import { Transition } from "@headlessui/react";
 import AddProductForm from "./AddProductForm";
 
-const Modal = ({ isOpen, onClose }) => {
+const ProductModal = ({ isOpen, onClose }) => {
   return (
     <Transition
       show={isOpen}
@@ -52,4 +52,4 @@ const Modal = ({ isOpen, onClose }) => {
   );
 };
 
-export default Modal;
+export default ProductModal;

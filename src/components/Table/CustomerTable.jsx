@@ -19,7 +19,6 @@ const CustomerTable = () => {
   useEffect(() => {
     fetchData();
   }, []);
-  console.log(customer);
   const [currentItems, setCurrentItems] = useState([]);
   const [pageCount, setPageCount] = useState(0);
   const [itemsOffset, setItemsOffset] = useState(0);
@@ -56,7 +55,7 @@ const CustomerTable = () => {
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200">
                   {currentItems.map((customer) => (
-                    <tr className="hover:bg-gray-50">
+                    <tr key={customer._id} className="hover:bg-gray-50">
                       <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{customer._id.slice(8, 12)}</td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{customer.registered.slice(0, 10)}</td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{customer.name}</td>

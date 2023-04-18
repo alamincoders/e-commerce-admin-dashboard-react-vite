@@ -1,8 +1,6 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
-import { UsePagination } from "../../hooks/UsePagination";
-import { RiDeleteBinLine } from "react-icons/ri";
-import { BiShow } from "react-icons/bi";
+import axios from 'axios';
+import React, {useEffect, useState} from 'react';
+import {UsePagination} from '../../hooks/UsePagination';
 
 const OrderTable = () => {
   const [orders, setOrders] = useState([]);
@@ -59,7 +57,7 @@ const OrderTable = () => {
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200">
                   {currentItems.map((order) => (
-                    <tr className="hover:bg-gray-50">
+                    <tr key={order._id} className="hover:bg-gray-50">
                       <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{order.order_time}</td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 capitalize">{order.delivery_address}</td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 capitalize">{order.phone}</td>

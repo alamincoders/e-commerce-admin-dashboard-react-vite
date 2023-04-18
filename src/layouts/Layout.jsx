@@ -9,8 +9,8 @@ const Layout = () => {
       <div className="hidden lg:block">
         <SideBar />
       </div>
-      <main className="pt-16 bg-gray-50 lg:pl-64">
-        <div className="p-6">
+      <main className="pt-16 bg-gray-50 lg:pl-64 min-h-screen">
+        <div className="p-3 md:p-4 lg:p-6">
           <Outlet />
         </div>
       </main>
