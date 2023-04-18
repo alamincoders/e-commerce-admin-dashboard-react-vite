@@ -7,15 +7,15 @@ const Validation = () => {
 
   return (
     <div>
-      <div class="flex flex-col w-full">
-        <div class="flex flex-col mb-4">
+      <div className="flex flex-col w-full">
+        <div className="flex flex-col mb-4">
           <label htmlFor="name" className="block font-medium mb-2">
             Name
           </label>
 
-          <div class="relative">
-            <div class="absolute flex border border-transparent left-0 top-0 h-full w-10">
-              <div class="flex items-center justify-center rounded-tl rounded-bl z-10 bg-gray-100 text-gray-600 text-lg h-full w-full">
+          <div className="relative">
+            <div className="absolute flex border border-transparent left-0 top-0 h-full w-10">
+              <div className="flex items-center justify-center rounded-tl rounded-bl z-10 bg-gray-100 text-gray-600 text-lg h-full w-full">
                 <svg
                   viewBox="0 0 24 24"
                   width="24"
@@ -25,7 +25,7 @@ const Validation = () => {
                   fill="none"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  class="h-5 w-5"
+                  className="h-5 w-5"
                 >
                   <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                   <circle cx="12" cy="7" r="4"></circle>
@@ -45,7 +45,7 @@ const Validation = () => {
           </div>
 
           {InputValue.length === 0 && (
-            <span class="flex items-center font-medium tracking-wide text-error-500 text-xs mt-1 ml-1">Invalid username field !</span>
+            <span className="flex items-center font-medium tracking-wide text-error-500 text-xs mt-1 ml-1">Invalid username field !</span>
           )}
         </div>
       </div>
