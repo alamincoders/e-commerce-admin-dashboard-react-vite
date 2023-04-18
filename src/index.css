@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .input_styles {
-  @apply w-full bg-gray-200/50  p-3 outline-none focus:bg-transparent border rounded;
+  @apply w-full bg-gray-200/50  p-3 outline-none focus:bg-transparent border rounded z-10;
 }
 
 /* Custom scrollbar styles */

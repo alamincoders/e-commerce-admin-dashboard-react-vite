@@ -19,8 +19,8 @@ const AddProduct = () => {
         <div>
           <Input className="input_styles" type="text" place="Search by product name" />
         </div>{" "}
-        <div className="relative">
-          <select className="input_styles relative appearance-none focus:outline-none focus:border-blue-500" name="Category" id="Category">
+        <div className="relative z-10">
+          <select className="input_styles relative appearance-none focus:outline-none focus:border-blue-500 " name="Category" id="Category">
             <option value="Category" className="text-gray-500">
               Category
             </option>
