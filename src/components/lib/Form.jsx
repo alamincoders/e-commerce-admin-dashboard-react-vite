@@ -18,7 +18,7 @@ const Form = () => {
       <div className="shadow-custom p-8 rounded-lg">
         <h2 className="text-xl font-medium mb-6">Icons</h2>
         <Icons />
-      </div>
+      </div>{" "}
     </div>
   );
 };
