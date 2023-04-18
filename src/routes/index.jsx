@@ -7,6 +7,7 @@ const Products = lazy(() => import("../pages/Products"));
 const Form = lazy(() => import("../components/lib/Form"));
 const Table = lazy(() => import("../pages/Table"));
 const CardCollection = lazy(() => import("../pages/CardCollection"));
+const Modal = lazy(() => import("../pages/Modal"));
 
 
 const router = createBrowserRouter([
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
       {
         path: "/card",
         element: <CardCollection />,
+      },
+      {
+        path: "/modal",
+        element: <Modal />,
       },
     ],
   },

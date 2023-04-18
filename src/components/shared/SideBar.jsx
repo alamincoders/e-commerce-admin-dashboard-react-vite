@@ -35,6 +35,11 @@ const SideBar = ({ handleCloseSidebar }) => {
             <BsTable /> <span>Table</span>
           </button>
         </CustomLink>
+        <CustomLink onClick={handleCloseSidebar} to="/modal">
+          <button className="flex items-center gap-2">
+            <BsTable /> <span>Modal</span>
+          </button>
+        </CustomLink>
         <CustomLink onClick={handleCloseSidebar} to='/card'><button className="flex items-center gap-2"><BsCardChecklist/> <span>Card</span></button></CustomLink>
       </div>
     </div>

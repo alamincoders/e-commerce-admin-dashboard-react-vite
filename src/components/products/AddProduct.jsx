@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Input from "../lib/Input";
-import Modal from "./Modal";
+import ProductModal from "./ProductModal";
 
 const AddProduct = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,7 +19,7 @@ const AddProduct = () => {
         <div>
           <Input className="input_styles" type="text" place="Search by product name" />
         </div>{" "}
-        <div className="relative z-10">
+        <div className="relative z-0">
           <select className="input_styles relative appearance-none focus:outline-none focus:border-blue-500 " name="Category" id="Category">
             <option value="Category" className="text-gray-500">
               Category
@@ -58,7 +58,7 @@ const AddProduct = () => {
             </svg>
           </div>
         </div>{" "}
-        <div className="relative">
+        <div className="relative z-0">
           <select className="input_styles relative appearance-none focus:outline-none focus:border-blue-500" name="Price" id="price">
             <option value="Price" className="text-gray-500">
               Price
@@ -105,7 +105,7 @@ const AddProduct = () => {
         </div>
       </div>
       <div className="absolute top-0 right-0 w-full bg-black">
-        <Modal isOpen={isOpen} onClose={handleCloseModal} />
+        <ProductModal isOpen={isOpen} onClose={handleCloseModal} />
       </div>
     </div>
   );

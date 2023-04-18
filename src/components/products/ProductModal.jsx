@@ -2,7 +2,7 @@ import React from "react";
 import { Transition } from "@headlessui/react";
 import AddProductForm from "./AddProductForm";
 
-const Modal = ({ isOpen, onClose }) => {
+const ProductModal = ({ isOpen, onClose }) => {
   return (
     <Transition
       show={isOpen}
@@ -14,8 +14,8 @@ const Modal = ({ isOpen, onClose }) => {
       leaveTo="translate-x-full"
     >
       <div className="fixed top-0 right-0 h-full w-full overflow-x-hidden">
-        <div onClick={onClose} className="h-screen hidden md:block w-1/2 bg-black opacity-50 fixed top-0 left-0 z-20"></div>
-        <div className="fixed top-0 right-0 h-auto lg:h-screen lg:w-1/2 w-full shadow-custom  z-20  bg-[#F4F5F7]">
+        <div onClick={onClose} className="h-screen hidden md:block w-1/2 bg-black opacity-50 fixed top-0 left-0 z-30"></div>
+        <div className="fixed top-0 right-0 h-auto lg:h-screen lg:w-1/2 w-full shadow-custom  z-50  bg-[#F4F5F7]">
           {/* Modal content */}
           {/* Replace this with your modal content */}
           <div className="pt-8 pl-5">
@@ -52,4 +52,4 @@ const Modal = ({ isOpen, onClose }) => {
   );
 };
 
-export default Modal;
+export default ProductModal;
