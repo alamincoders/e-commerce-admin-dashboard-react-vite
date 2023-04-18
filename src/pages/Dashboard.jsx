@@ -9,7 +9,7 @@ const Dashboard = () => {
             <h2 className='text-xl font-medium pb-6'>Dashboard Overview</h2>
             <OrderOverview/>
             
-            <Chart/>
+            {/* <Chart/> */}
             <h2 className='text-xl font-medium pb-6'>Recent Order</h2>
             <OrderTable/>
         </div>

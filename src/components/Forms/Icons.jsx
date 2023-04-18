@@ -5,7 +5,7 @@ const Icons = () => {
   return (
     <div>
       <div className="flex flex-col mb-4">
-        <label for="name" className="mb-1 text-xs sm:text-sm tracking-wide text-gray-600">
+        <label htmlFor="name" className="mb-1 text-xs sm:text-sm tracking-wide text-gray-600">
           Name
         </label>
 
@@ -17,10 +17,10 @@ const Icons = () => {
                 width="24"
                 height="24"
                 stroke="currentColor"
-                stroke-width="2"
+                strokeWidth="2"
                 fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 className="h-5 w-5"
               >
                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
@@ -39,7 +39,7 @@ const Icons = () => {
         </div>
       </div>
       <div className="flex flex-col mb-4">
-        <label for="name" className="mb-1 text-xs sm:text-sm tracking-wide text-gray-600">
+        <label htmlFor="name" className="mb-1 text-xs sm:text-sm tracking-wide text-gray-600">
           Name
         </label>
 
@@ -58,10 +58,10 @@ const Icons = () => {
                 width="24"
                 height="24"
                 stroke="currentColor"
-                stroke-width="2"
+                strokeWidth="2"
                 fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 className="h-5 w-5"
               >
                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>

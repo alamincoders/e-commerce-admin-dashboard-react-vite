@@ -95,7 +95,7 @@ const ProductTable = () => {
                                     </tr>
                                 </thead>
                                 <tbody className="bg-white divide-y divide-gray-200">
-                                    {currentItems.map((product, index) => <tr className="hover:bg-gray-50">
+                                    {currentItems.map((product, index) => <tr key={product._id} className="hover:bg-gray-50">
                                         <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 flex items-center gap-2">
                                             <img className='w-8 h-8 rounded-full hidden md:block' src={product.picture} alt="" />
                                             <span>{product.name}</span>
@@ -131,22 +131,22 @@ const ProductTable = () => {
                                         </button>
                                         </td>
                                         <td className="px-6 py-4 whitespace-nowrap text-sm font-medium flex gap-4">
-                                        <div class="relative flex flex-col items-center group">
+                                        <div className="relative flex flex-col items-center group">
                                                 <button className='text-gray-400 text-lg'><BiShow/></button>
                                                 <div
-                                                    class="absolute bottom-0 flex-col items-center hidden mb-6 group-hover:flex">
+                                                    className="absolute bottom-0 flex-col items-center hidden mb-6 group-hover:flex">
                                                     <span
-                                                        class="relative z-10 p-2 text-xs leading-none text-white whitespace-no-wrap bg-success-500 shadow-lg">View</span>
-                                                    <div class="w-3 h-3 -mt-2 rotate-45 bg-success-500"></div>
+                                                        className="relative z-10 p-2 text-xs leading-none text-white whitespace-no-wrap bg-success-500 shadow-lg">View</span>
+                                                    <div className="w-3 h-3 -mt-2 rotate-45 bg-success-500"></div>
                                                 </div>
                                             </div>
-                                            <div class="relative flex flex-col items-center group">
+                                            <div className="relative flex flex-col items-center group">
                                             <button className='text-gray-400 text-lg'><RiDeleteBinLine/></button>
                                                 <div
-                                                    class="absolute bottom-0 flex-col items-center hidden mb-6 group-hover:flex">
+                                                    className="absolute bottom-0 flex-col items-center hidden mb-6 group-hover:flex">
                                                     <span
-                                                        class="relative z-10 p-2 text-xs leading-none text-white whitespace-no-wrap bg-error-500 shadow-lg">Delete</span>
-                                                    <div class="w-3 h-3 -mt-2 rotate-45 bg-error-500"></div>
+                                                        className="relative z-10 p-2 text-xs leading-none text-white whitespace-no-wrap bg-error-500 shadow-lg">Delete</span>
+                                                    <div className="w-3 h-3 -mt-2 rotate-45 bg-error-500"></div>
                                                 </div>
                                             </div>
 

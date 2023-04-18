@@ -1,9 +1,11 @@
 import React from 'react';
+import { Card } from '../components/Cards/Card';
 
 const CardCollection = () => {
     return (
         <div>
-            <p>Card Collections</p>
+            <h2 className='pb-6 text-xl font-semibold'>Card Collections</h2>
+            <Card/>
         </div>
     );
 };
